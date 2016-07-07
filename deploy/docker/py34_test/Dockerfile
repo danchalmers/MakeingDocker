@@ -1,0 +1,3 @@
+FROM py34_base
+ENV PYTHONPATH ./test:$PYTHONPATH
+
