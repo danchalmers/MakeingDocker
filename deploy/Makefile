@@ -22,7 +22,7 @@ run_py34_test: images
 		echo "Removing old test runner"; \
 		docker rm -f py_test; \
 	fi
-	@docker run --rm -v=$(PWD)/..:/project -t --name py_test py34_test python3 -m unittest discover
+	@docker run --rm -v=$(PWD)/..:/project -t --name py_test py34_test python3 -m unittest discover -s test/
 
 
 .PHONY: run_java_bash
